@@ -30,7 +30,7 @@ public class CountNoOfOccuerencesOfString {
 			}
 		}
 
-		System.out.println(maxChar + " = " + maxCount);
+		System.out.println(maxChar + " ==> " + maxCount);
 	}
 
 //	public static void usingHashMapForArray(String[] name) {
