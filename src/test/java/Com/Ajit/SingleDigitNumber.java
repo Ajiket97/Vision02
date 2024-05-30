@@ -12,6 +12,7 @@ public class SingleDigitNumber {
 			sum = sum+rem; 
 			num = num/10; 
 			
+			
 		}
 		System.out.println("Sum of all digits  :" + sum);		
 		if (sum>10) {

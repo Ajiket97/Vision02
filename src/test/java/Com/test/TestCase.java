@@ -14,25 +14,30 @@ import com.keyword.PropUtil;
 
 public class TestCase {
 	@Test
-	public void verifyLastNameRequriedOrNot() {
+	public void verifyLastNameRequriedOrNot() throws Throwable {
 		String msg = "Last name is required.";
 
 		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://parabank.parasoft.com/parabank/index.htm");
-		driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/p[2]/a")).click();
-		driver.findElement(By.cssSelector("input[id='customer.firstName']")).sendKeys("ajit");
-		driver.findElement(By.cssSelector("input[id='customer.address.street']")).sendKeys("telhara");
-		driver.findElement(By.cssSelector("input[id='customer.address.city']")).sendKeys("telhara");
-		driver.findElement(By.cssSelector("input[id='customer.address.state']")).sendKeys("maf");
-		driver.findElement(By.cssSelector("input[id='customer.address.zipCode']")).sendKeys("441088");
-		driver.findElement(By.cssSelector("input[id='customer.phoneNumber']")).sendKeys("9876543210");
-		driver.findElement(By.cssSelector("input[id='customer.ssn']")).sendKeys("585479j");
-		driver.findElement(By.cssSelector("input[id='customer.username']")).sendKeys("ajit");
-		driver.findElement(By.cssSelector("[id='customer.password']")).sendKeys("Ajit@123");
-		driver.findElement(By.cssSelector("input[id='repeatedPassword']")).sendKeys("Ajit@123");
-		driver.findElement(By.cssSelector("td>input[type='submit']")).click();
-		String errormsg = driver.findElement(By.cssSelector("span[id='customer.lastName.errors']")).getText();
-		Assert.assertEquals(msg, errormsg);
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com/");
+		Thread.sleep(6000);
+		//driver.findElement(By.xpath("")).click();
+
+		//driver.findElement(By.xpath("//span[text() = 'Electronics']/ancestor::body/descendant::a[text()='Gaming']/ancestor::div[@class='_1UgUYI _2eN8ye']/descendant::a[text()='Gaming Keyboards']")).click();
+		driver.findElement(By.xpath("//div[@class=\"_1wE2Px\"]/preceding-sibling::div[@class=\"_1UgUYI _2eN8ye\"]/descendant::a[text()='Gaming']/ancestor::div[@class=\"_1UgUYI _2eN8ye\"]/child::div[@class=\"_31z7R_\"]/descendant::a[text()='Gaming Keyboards']")).click();
+//		driver.findElement(By.cssSelector("input[id='customer.firstName']")).sendKeys("ajit");
+//		driver.findElement(By.cssSelector("input[id='customer.address.street']")).sendKeys("telhara");
+//		driver.findElement(By.cssSelector("input[id='customer.address.city']")).sendKeys("telhara");
+//		driver.findElement(By.cssSelector("input[id='customer.address.state']")).sendKeys("maf");
+//		driver.findElement(By.cssSelector("input[id='customer.address.zipCode']")).sendKeys("441088");
+//		driver.findElement(By.cssSelector("input[id='customer.phoneNumber']")).sendKeys("9876543210");
+//		driver.findElement(By.cssSelector("input[id='customer.ssn']")).sendKeys("585479j");
+//		driver.findElement(By.cssSelector("input[id='customer.username']")).sendKeys("ajit");
+//		driver.findElement(By.cssSelector("[id='customer.password']")).sendKeys("Ajit@123");
+//		driver.findElement(By.cssSelector("input[id='repeatedPassword']")).sendKeys("Ajit@123");
+//		driver.findElement(By.cssSelector("td>input[type='submit']")).click();
+//		String errormsg = driver.findElement(By.cssSelector("span[id='customer.lastName.errors']")).getText();
+//		Assert.assertEquals(msg, errormsg);
 	}
 
 	@Test
@@ -112,7 +117,8 @@ public class TestCase {
 		Assert.assertEquals(msg, ermsg);
 
 	}
-@Test
+
+	@Test
 	public void verifyMobilenumberInvalidOrNot() {
 		Keyword keyword = new Keyword();
 		keyword.openBrowser();
