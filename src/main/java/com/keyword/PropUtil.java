@@ -49,7 +49,6 @@ public class PropUtil {
 		try {
 			fis = new FileInputStream(filepath);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Properties prop = new Properties();

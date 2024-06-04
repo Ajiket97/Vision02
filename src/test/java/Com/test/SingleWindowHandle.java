@@ -32,7 +32,7 @@ public class SingleWindowHandle {
 				d.switchTo().window(string);
 				String title = d.getTitle();
 				System.out.println(" windows Title "+title);
-				if (title.contains("Third Window")) {
+				if (title.contains("Second Window")) {
 					d.switchTo().window(string);
 					wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@onclick=\"clickMe()\"]")));
 					//d.findElement(By.xpath("//button[@onclick=\"clickMe()\"]")).click();
